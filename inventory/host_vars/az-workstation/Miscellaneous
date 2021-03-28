@@ -1,0 +1,19 @@
+## lab group subscription ID
+az account set --subscription 8924649c-5f95-4dc2-9adc-0a982e0cfd65
+
+## helpful commands
+sudo apt-get update
+sudo apt-get install git
+sudo apt-get install ansible
+sudo apt-get install python3-pip
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+sudo pip3 install -r ~/.ansible/collections/ansible_collections/azure/azcollection/requirements-azure.txt
+ansible-galaxy collection install azure.azcollection
+ansible-galaxy collection install azure.azcollection --force1az
+az login
+az account set --subscription 8924649c-5f95-4dc2-9adc-0a982e0cfd65
+git pull
+ansible-playbook provisioning.yml -i ./inventory/ --ask-vault-pass
+
+## how to SSH into controller VM
+ssh dylanblasi-azadmin@104.40.16.212
