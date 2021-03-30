@@ -20,3 +20,7 @@ ssh dylanblasi-azadmin@104.40.16.212
 
 ## How to stack information on top of other information when both pieces of history should be there ("rebase"). AKA if someone has made changes and you want to also add your changes.
 git rebase origin/main
+
+## ALWAYS git pull from powershell, if issues with WSL occur. Good remediation commands:
+git status
+git log
