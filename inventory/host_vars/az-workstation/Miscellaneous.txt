@@ -23,3 +23,5 @@ git rebase origin/main
 
 ## How to view vault file 
 ansible-vault view vault.yml
+
+## How to Push
