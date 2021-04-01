@@ -39,7 +39,8 @@ git push
 ## 01 APR 2021
 ssh-keygen
 ssh-copy-id dylanblasi-azadmin@104.40.16.212
-ssh 'dylanblasi-azadmin@104.40.16.212'e
+ssh 'dylanblasi-azadmin@104.40.16.212'
 mkdir roles
 cd roles
 git clone https://github.com/draevin/ansible-hardening
+
