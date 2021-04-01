@@ -28,6 +28,8 @@ git rebase origin/main
 git pull
 git status
 git log
+git remote -v
+## last line confirms what fork you are pushing/pulling too
 
 
 ## How to view vault file 
