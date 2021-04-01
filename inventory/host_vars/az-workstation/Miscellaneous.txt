@@ -35,3 +35,9 @@ ansible-vault view vault.yml
 
 ## How to Push, also recommended to do in powershell
 git push
+
+## 01 APR 2021
+ssh-keygen
+ssh-copy-id dylanblasi-azadmin@40.78.97.78
+ssh 'dylanblasi-azadmin@40.78.97.78'
+
