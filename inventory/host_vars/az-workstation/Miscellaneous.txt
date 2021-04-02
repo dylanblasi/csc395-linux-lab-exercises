@@ -17,7 +17,6 @@ ansible-playbook provisioning.yml -i ./inventory/ --ask-vault-pass
 
 ## How to SSH into controller VM
 ssh dylanblasi-azadmin@104.40.16.212
-ssh dylanblasi-azadmin@138.91.198.167
 ## ssh-copy-id <admin>@<IP>
 
 ## How to stack information on top of other information when both pieces of history should be there ("rebase"). AKA if someone has made changes and you want to also add your changes.
