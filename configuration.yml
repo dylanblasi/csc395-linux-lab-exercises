@@ -10,6 +10,11 @@
         - git
       state: latest
 
+- name: Disable the login banner
+  net_banner:
+    banner: login
+    state: absent
+
 - name: Universal host configuration
   hosts: ansible_lab_hosts
   vars:
