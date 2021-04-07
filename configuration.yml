@@ -13,6 +13,7 @@
 - name: Disable the login banner
   net_banner:
     banner: login
+    banner: motd
     state: absent
 
 - name: Universal host configuration
