@@ -45,3 +45,9 @@ mkdir roles
 cd roles
 git clone https://github.com/draevin/ansible-hardening
 
+## Working play for removing login banner (incomplete - does not work)
+- name: Disable the login banner
+  net_banner:
+    banner: login
+    banner: motd
+    state: absent
