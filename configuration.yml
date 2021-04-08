@@ -50,7 +50,6 @@
       group: root
       mode: '0644'
     notify: Restart dnsmasq
-    
   handlers:   
   - name: Restart dnsmasq
     ansible.builtin.service:
