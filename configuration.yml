@@ -13,7 +13,7 @@
 - name: Universal host configuration
   hosts: ansible_lab_hosts
   vars:
-      ansible_become: true
+    ansible_become: true
   roles:
   - role: ansible-hardening
     vars:
