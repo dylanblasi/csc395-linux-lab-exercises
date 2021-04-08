@@ -24,7 +24,7 @@
 - name: Configure DNS server
   hosts: ansible-lab-host1
   vars:
-    ansible_become:true
+    ansible_become: true
   tasks:
   - name: Install dnsmasq
     ansible.builtin.package:
