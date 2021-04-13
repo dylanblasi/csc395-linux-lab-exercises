@@ -16,6 +16,7 @@
     ansible_become: true
   roles:
   - role: ansible-hardening
+    tags: hardening
     vars:
       stig_version: rhel7
       security_enable_pwquality_password_set: yes
@@ -33,23 +34,23 @@
     notify: Restart dnsmasq
   - name: Set local hostname
     ansible.builtin.lineinfile:
-      path: /etc/hosts/
+      path: /etc/hosts
       regexp: '^10\.1\.2\.4'
       line: '10.1.2.4 cool-new-name1'
     notify: Restart dnsmasq
   - name: Add host 2
     lineinfile: 
-      path: /etc/hosts/
+      path: /etc/hosts
       regexp: '^10\.1\.2\.5'
       line: '10.1.2.5 cool-new-name2'
   - name: Add host 3
     lineinfile: 
-      path: /etc/hosts/
+      path: /etc/hosts
       regexp: '^10\.1\.2\.6'
       line: '10.1.2.6 cool-new-name3'
   - name: Add Controller
     lineinfile: 
-      path: /etc/hosts/
+      path: /etc/hosts
       regexp: '^10\.1\.1\.4'
       line: '10.1.1.4 ansible-lab-controller'         
   - name: Disable existing DNS

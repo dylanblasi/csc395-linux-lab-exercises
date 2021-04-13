@@ -8,10 +8,10 @@ all:
   children:
     ansible_lab_hosts:
       hosts:
-        cool-new-name1:
+        ansible-lab-host1:
           ansible_host: 10.1.2.4
-        cool-new-name2:
+        ansible-lab-host2:
           ansible_host: 10.1.2.5
-        cool-new-name3:
+        ansible-lab-host3:
           ansible_host: 10.1.2.6
   
