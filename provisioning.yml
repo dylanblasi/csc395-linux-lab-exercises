@@ -67,6 +67,12 @@
         access: Deny
         priority: 103
         direction: Inbound
+      - name: 'AllowSubnetSamba'
+        protocol: Tcp
+        source_address-prefix: 10.1.2.0/28
+        destination_port_range:
+        - 139
+        - 445
   - name: 'Create {{ host_subnet_name }}'
     azure.azcollection.azure_rm_subnet:
       name: '{{ host_subnet_name }}'
