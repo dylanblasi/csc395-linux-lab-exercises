@@ -53,3 +53,11 @@ git clone https://github.com/draevin/ansible-hardening
     banner: login
     banner: motd
     state: absent
+
+## 13 APR 21
+## moving between hosts on the internal azure linux network
+ssh dylanblasi-azadmin@10.1.2.4
+ssh dylanblasi-azadmin@10.1.2.5
+ssh dylanblasi-azadmin@10.1.2.6
+
+sudo apt-get install samba
