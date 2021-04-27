@@ -22,12 +22,12 @@
       security_enable_pwquality_password_set: yes
       security_password_max_lifetime_days: 90
   tasks:
-  - name: Disable the login banner
-    net_banner:
-      banner: 
-      - login
-      - motd
-      state: absent
+  - name: Disable the permissions of the MOTD
+    file: 
+      path: /etc/update-motd.d
+      state: directory
+      mode: '0644'
+      recurse: yes
 
 - name: Configure DNS server
   hosts: ansible-lab-host1
