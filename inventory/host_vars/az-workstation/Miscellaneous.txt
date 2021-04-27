@@ -63,3 +63,10 @@ ssh dylanblasi-azadmin@10.1.2.5
 ssh dylanblasi-azadmin@10.1.2.6
 
 sudo apt-get install samba
+
+#### Installing and setting up VPN
+## docs.ansible.com & digital ocean
+## https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-openvpn-server-on-ubuntu-20-04
+
+sudo update
+sudo apt install openvpn easy-rsa
