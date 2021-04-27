@@ -11,7 +11,7 @@
       state: latest
 
 - name: Universal host configuration
-  hosts: ansible_lab_hosts
+  hosts: ansible_lab_hosts:ansible-lab-controller
   vars:
     ansible_become: true
   roles:
