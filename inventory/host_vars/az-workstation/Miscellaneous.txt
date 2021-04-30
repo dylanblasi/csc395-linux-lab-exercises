@@ -67,6 +67,7 @@ sudo apt-get install samba
 #### Installing and setting up VPN
 ## docs.ansible.com & digital ocean
 ## https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-openvpn-server-on-ubuntu-20-04
+## https://github.com/kyl191/ansible-role-openvpn
 
 sudo update
 sudo apt install openvpn easy-rsa
