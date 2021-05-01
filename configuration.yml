@@ -86,3 +86,25 @@
     ansible_become: true
   roles:
   - bertvv.samba
+
+- name: Install nginx
+  hosts: ansible-lab-host3
+  tasks:
+    - name: install nginx
+      apt: name=nginx state=latest
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
+
+- name: Custom Website
+  hosts: ansible-lab-host3
+  tasks:
+  - name:  Custom Website
+    become: yes
+    ansible.builtin.copy:
+      src: files/index.nginx-debian.html
+      dest: /var/www/html/index.nginx-debian.html
+      owner: root
+      group: root
+      mode: '0644'
