@@ -68,4 +68,5 @@ sudo apt-get install samba
 sudo update
 sudo apt install openvpn easy-rsa
 
+ansible-playbook configuration.yml --skip-tags hardening --ask-vault-pass
 ansible-playbook configuration.yml -l ansible-lab-host3 -i inventory.yml -u dylanblasi-azadmin

@@ -98,8 +98,8 @@
       state: latest
   - name: Create credential file
     file:
-      src: /csc395-linux-lab-exercises/files/.smbpasswd.conf
-      dest: /home/{{ admin_un }}/csc395-linux-lab-exercises/files/.smbpasswd.conf
+      src: /csc395-linux-lab-exercises/files/.smbpasswd
+      dest: /home/{{ admin_un }}/csc395-linux-lab-exercises/files/.smbpasswd
       owner: '{{ admin_un }}'
       group: '{{ admin_un }}'
       mode: '0600'
@@ -108,7 +108,7 @@
       src: //10.1.2.5/sambashare
       path: /mnt/smbshare
       fstype: cifs
-      opts: credentials=/home/{{ admin_un }}/csc395-linux-lab-exercises/files/.smbpasswd.conf
+      opts: credentials=/home/{{ admin_un }}/csc395-linux-lab-exercises/files/.smbpasswd
       state: mounted
   - name: Set mount as writeable
     file: 
