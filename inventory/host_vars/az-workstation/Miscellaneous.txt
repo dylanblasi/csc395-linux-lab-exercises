@@ -68,6 +68,9 @@ sudo apt-get install samba
 ## docs.ansible.com & digital ocean
 ## https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-openvpn-server-on-ubuntu-20-04
 ## https://github.com/kyl191/ansible-role-openvpn
+## https://github.com/MiteshSharma/OpenVPNAnsible
+## https://itnext.io/setup-privacy-with-openvpn-using-ansible-b9e613a66f85
+## https://www.howtoforge.com/tutorial/how-to-install-openvpn-server-and-client-with-easy-rsa-3-on-centos-7/
 
 sudo update
 sudo apt install openvpn easy-rsa
