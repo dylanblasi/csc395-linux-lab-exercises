@@ -107,19 +107,19 @@
     mount:
       src: //10.1.2.5/testshare
       path: /mnt/smbshare
-      fstype: cifs
+      fstype: "cifs"
       opts: credentials=/home/{{ admin_un }}/.smbpasswd
-      state: mounted
+      state: "mounted"
   - name: Set mount as writeable
     file:
       path: /mnt/smbshare
       state: directory
       mode: '0777'
 
-- name: Installing Nginx
+- name: Installing nginx
   hosts: ansible-lab-host3
   tasks:
-    - name: Installing Nginx
+    - name: Installing nginx
       apt: name=nginx state=latest
     - name: start nginx
       service:
