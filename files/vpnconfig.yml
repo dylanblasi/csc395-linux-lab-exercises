@@ -31,7 +31,7 @@
       chdir: /etc/openvpn/easy-rsa/
     tags: init
 
-    - name: Change working dir
+  - name: Change working dir
     shell: ./easyrsa build-ca
     args:
       chdir: /etc/openvpn/easy-rsa/
