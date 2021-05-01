@@ -1,0 +1,38 @@
+- name: Update apt packages
+  become: true
+  apt:
+    upgrade: yes
+
+- name: Install openvpn
+  package:
+   name: "{{ item }}"
+   state: present
+  with_items:
+    - openvpn
+    - easy-rsa
+
+
+
+
+  - name: Copy RSA File
+  copy:
+     src: /usr/share/easy-rsa
+     dest: /etc/openvpn
+
+  - name: Use Template file
+    template:
+      src: ./files/vars.j2
+      dest: /etc/openvpn/easy-rsa/vars
+      mode: "0755"
+ 
+  - name: Change working dir
+    ansible.builtin.shell: ./easyrsa init-pki
+    args:
+     chdir: /etc/openvpn/easy-rsa/vars
+
+
+
+
+
+
+
