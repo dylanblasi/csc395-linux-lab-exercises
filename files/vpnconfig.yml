@@ -1,21 +1,21 @@
-- name: Update apt packages
+---
+- name: Install OpenVPN and Easy RSA
+  hosts: ansible-lab-controller
   become: true
-  apt:
-    upgrade: yes
-
-- name: Install openvpn
-  package:
-   name: "{{ item }}"
-   state: present
-  with_items:
-    - openvpn
-    - easy-rsa
-
-
-
+  tasks:
+  - name: Update apt packages
+    apt:
+      upgrade: yes
+  - name: Install openvpn
+    package:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - openvpn
+      - easy-rsa
 
   - name: Copy RSA File
-  copy:
+    copy:
      src: /usr/share/easy-rsa
      dest: /etc/openvpn
 
