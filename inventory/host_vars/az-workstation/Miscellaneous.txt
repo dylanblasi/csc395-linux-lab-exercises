@@ -72,3 +72,5 @@ sudo ufw allow proto tcp from any to any port 22,80,443
 opts: "credentials=/root/.smb_passwords,file_mode=0644,dir_mode=0755,gid=root,uid=root"
 ansible-playbook configuration.yml --skip-tags hardening --ask-vault-pass
 ansible-playbook configuration.yml -l ansible-lab-host3 -i inventory.yml -u dylanblasi-azadmin
+
+https://github.com/cnenno/privatekey.git
