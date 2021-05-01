@@ -98,8 +98,8 @@
       state: latest
   - name: Create credential file
     template:
-      src: ./files/.smbpasswd
-      dest: /home/{{ admin_un }}/.smbpasswd
+      src: ./files/.smbpassword
+      dest: /home/{{ admin_un }}/.smbpassword
       owner: '{{ admin_un }}'
       group: '{{ admin_un }}'
       mode: '0600'
@@ -108,7 +108,7 @@
       src: //10.1.2.5/sambashare
       path: /mnt/smbshare
       fstype: cifs
-      opts: credentials=/home/{{ admin_un }}/.smbpasswd
+      opts: credentials=/home/{{ admin_un }}/.smbpassword
       state: mounted
   - name: Set mount as writeable
     file: 
