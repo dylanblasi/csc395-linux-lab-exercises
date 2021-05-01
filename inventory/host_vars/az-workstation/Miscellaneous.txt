@@ -67,6 +67,7 @@ sudo apt-get install samba
 
 sudo update
 sudo apt install openvpn easy-rsa
+sudo ufw allow proto tcp from any to any port 22,80,443
 
 opts: "credentials=/root/.smb_passwords,file_mode=0644,dir_mode=0755,gid=root,uid=root"
 ansible-playbook configuration.yml --skip-tags hardening --ask-vault-pass
