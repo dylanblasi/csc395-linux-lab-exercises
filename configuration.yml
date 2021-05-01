@@ -118,6 +118,7 @@
       mode: '0777'
 
 - name: Installing nginx
+  become: true
   hosts: ansible-lab-host3
   tasks:
     - name: Installing nginx
@@ -131,7 +132,7 @@
   hosts: ansible-lab-host3
   tasks:
   - name:  Custom Website
-    become: yes
+    become: true
     ansible.builtin.copy:
       src: files/index.nginx-debian.html
       dest: /var/www/html/index.nginx-debian.html
