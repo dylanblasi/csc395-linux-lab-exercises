@@ -97,7 +97,7 @@
       name: cifs-utils
       state: latest
   - name: Create credential file
-    template:
+    file:
       src: files/.smbpasswd
       dest: /home/{{ admin_un }}/.smbpasswd
       owner: '{{ admin_un }}'
