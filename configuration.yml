@@ -98,7 +98,7 @@
       state: latest
   - name: Create credential file
     file:
-      src: /files/.smbpasswd
+      src: /csc395-linux-lab-exercises/files/.smbpasswd
       dest: /home/{{ admin_un }}/.smbpasswd
       owner: '{{ admin_un }}'
       group: '{{ admin_un }}'
