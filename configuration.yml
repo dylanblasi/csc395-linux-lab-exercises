@@ -89,6 +89,7 @@
 
 - name: Configure Samba client
   hosts: ansible-lab-host3
+  tags: Samba
   vars:
     ansible_become: true
   tasks:
