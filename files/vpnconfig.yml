@@ -26,9 +26,15 @@
       mode: "0755"
  
   - name: Change working dir
-    ansible.builtin.shell: ./easyrsa init-pki
+    shell: ./easyrsa init-pki
     args:
-     chdir: /etc/openvpn/easy-rsa/vars
+      chdir: /etc/openvpn/easy-rsa/
+    tags: init
+
+    - name: Change working dir
+    shell: ./easyrsa build-ca
+    args:
+      chdir: /etc/openvpn/easy-rsa/
 
 
 
