@@ -48,13 +48,6 @@ mkdir roles
 cd roles
 git clone https://github.com/draevin/ansible-hardening
 
-## Working play for removing login banner (incomplete - does not work)
-- name: Disable the login banner
-  net_banner:
-    banner: 
-    - login
-    - motd
-    state: absent
 
 ## 13 APR 21
 ## moving between hosts on the internal azure linux network
@@ -74,3 +67,5 @@ sudo apt-get install samba
 
 sudo update
 sudo apt install openvpn easy-rsa
+
+ansible-playbook configuration.yml -l ansible-lab-host3 -i inventory.yml -u dylanblasi-azadmin
