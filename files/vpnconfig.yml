@@ -1,4 +1,5 @@
----
+### This does not work currently and is unrelated to the correct openVPN install
+### Do not use this
 - name: Install OpenVPN and Easy RSA
   hosts: ansible-lab-controller
   become: true

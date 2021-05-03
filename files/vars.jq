@@ -1,3 +1,4 @@
+##donotusethiseither
 set_var EASYRSA                 "$PWD"
 set_var EASYRSA_PKI             "$EASYRSA/pki"
 set_var EASYRSA_DN              "cn_only"
