@@ -1,26 +1,14 @@
 ---
 samba_server_string: SambaMnt
-
 samba_workgroup: Group1
-
 samba_users: 
-
 - name: '{{admin_un}}'
-
   password: '{{admin_pw}}'
-
 samba_shares_root: /srv/samba
-
 samba_shares: 
-
 - name: sambashare
-
-  comment: 
-
+  comment: 'Only accessible to {{ admin_un }}'
   valid_users: '{{admin_un}}'
-
   write_list: '{{admin_un}}'
-
   group: '{{admin_un}}'
-
   browseable: True
