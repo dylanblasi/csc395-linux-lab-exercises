@@ -58,7 +58,7 @@
         destination_port_range: 0-65535
         access: Deny
         priority: 200
-        direction: Inbound
+        exitdirection: Inbound
   - name: 'Create {{ controller_subnet_name }}'
     azure.azcollection.azure_rm_subnet:
       name: '{{ controller_subnet_name }}'
